@@ -12,19 +12,15 @@ Pod::Spec.new do |spec|
 
     spec.public_header_files = [
         "extensions/include/cmark-gfm-core-extensions.h",
-    ]
-    spec.preserve_paths = [
-        "extensions/**/*",
+        "src/include/*.h",
     ]
     spec.source_files = [
         "extensions/**/*.{c,h}", 
+        "src/**/*.{c,h,inc}"
     ]
     spec.exclude_files = [
         "extensions/CMakeLists.txt",
         "extensions/ext_scanners.re",
         "extensions/include/module.modulemap"
     ]
-    spec.xcconfig  = {
-        'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/cmark-gfm/src/include"',
-    }
 end

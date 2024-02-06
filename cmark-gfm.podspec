@@ -7,10 +7,10 @@ Pod::Spec.new do |spec|
     spec.source     = { :git => "https://github.com/hanny-ph/swift-cmark", :tag => spec.version.to_s }
 
     spec.ios.deployment_target  = "13.0"
+
     spec.public_header_files = [
         "src/include/*.h",
     ]
-    spec.preserve_paths = "src/**/*"
     spec.source_files   = "src/**/*.{c,h,inc}"
     spec.exclude_files = [
         "src/scanners.re",
